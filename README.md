@@ -16,6 +16,8 @@ In traditional chat platforms, users often feel hesitant to express themselves f
 - **Search and Discovery**: Users can search for specific topics or interests to discover relevant chat rooms and conversations.
 
 
+
+
 ## Implementation
 
 ### Tech Stack
@@ -63,7 +65,7 @@ User authentication is handled using JWT (JSON Web Tokens) for secure access to 
  **Rich Media Support**: Enable support for sharing multimedia content within chat rooms.
  **Notification System**: Implement notification settings for alerting users about new messages and chat invitations.
 
-![create account page](images/create-account.png)
+![create account page](Banter-Box/images/create-account.png)
 ![Log in page](images/login.png)
 ![Chat room page](images/chatroom.png)
 ![User setting page](images/profile-setting.png)
