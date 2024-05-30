@@ -62,3 +62,10 @@ User authentication is handled using JWT (JSON Web Tokens) for secure access to 
 
  **Rich Media Support**: Enable support for sharing multimedia content within chat rooms.
  **Notification System**: Implement notification settings for alerting users about new messages and chat invitations.
+
+![create account page](images/create-account.png)
+![Log in page](images/login.png)
+![Chat room page](images/chatroom.png)
+![User setting page](images/profile-setting.png)
+![Diagram](images/diagram.png)
+
