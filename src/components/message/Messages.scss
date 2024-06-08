@@ -1,0 +1,22 @@
+.chat {
+    display: flex;
+    align-items: flex-start;
+  
+    &.chat-start {
+      justify-content: flex-start;
+      .message-bubble {
+        background-color: #f1f1f1;
+        color: #000;
+        border-radius: 15px 15px 15px 0;
+      }
+    }
+  
+    &.chat-end {
+      justify-content: flex-end;
+      .message-bubble {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 15px 15px 0 15px;
+      }
+    }
+  }
