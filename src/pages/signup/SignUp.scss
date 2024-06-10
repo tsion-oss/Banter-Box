@@ -3,34 +3,38 @@
 @use "../../styles/partials/typography.scss" as *;
 @use "../../styles/partials/variables" as *;
 
-.login{
+.signup{
    height: 100vh;
    background-color: $main-color;
    color: $font-color;
    padding: 1rem;
-    @include tablet{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 3rem;
-    }
+   @include tablet{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 3rem;
+   }
+   &__h1{
+    margin: 0;
+   }
    &__logo{
     @include tablet{
-        width: 90%;
-      }
+      width: 90%;
+    }
    }
+ 
    &__form{
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & div{
-     width: 100%;
+     padding-top: 1rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     & div{
+      width: 100%;
+    }
+     @include tablet{
+        width: 20rem;   
+    }
    }
-    @include tablet{
-       width: 20rem;   
-   }
-  }
    & .input-div{
      display: flex;
      flex-direction: column;
@@ -49,7 +53,7 @@
         }
      }
      & label{
-        font-size: 1rem;
+        font-size: 1.1rem;
         
      }
    }

@@ -1,6 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import useSendMessage from '../../hooks/useSendMessage';
+import "./MessageInput.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const MessageInput = () => {
     const [message, setMessage] = useState("")
@@ -12,16 +15,16 @@ const MessageInput = () => {
         setMessage("")
     }
     return (
-        <form onSubmit={handleSubmit}>
-        <div>
-           <input type='text'
-                  placeholder='Send a message'
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}/>
-           <button type='submit'
-                   >Send</button>
-        </div>
-     </form>
+        <form className='input-form' onSubmit={handleSubmit}>
+            <div className='input-form__div'>
+                <input type='text'
+                        placeholder='Send a message'
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}/>
+                <button type='submit'
+                        ><FontAwesomeIcon icon={faPaperPlane} /></button>
+            </div>
+        </form>
     );
 };
 

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import useConversation from '../../store/useConversation.js';
 import Messages from '../message/Messages.jsx';
 import { useAuthContext } from '../../context/AuthContext.jsx';
+import "./MessageContainer.scss"
 
 const MessageContainer = () => {
     const { selectedConversation, setSelectedConversation } = useConversation()
@@ -13,21 +14,22 @@ const MessageContainer = () => {
     }, [setSelectedConversation])
 
     return (
-        <div>
+        <div className='message-container'>
             {!selectedConversation? 
-            (<NoChatSelected/>) :
-            <>(
+            <NoChatSelected/> :
+            <>
             {/* Header */}
-            <div>
-                <span>To:</span>
-                <span>{selectedConversation.fullName}</span>
+            <div className='message-container__header'>
+                <div>
+                    <img src={selectedConversation.profilePic} alt='user avatar' />
+                </div>
+                <div>
+                    {/* <span>To:</span> */}
+                    <span>{selectedConversation.fullName}</span>
+                </div>
             </div>
 
             <Messages/>
-            {/* <MessagesInput/> */}
-
-         
-             )
             </>
             }
         </div>

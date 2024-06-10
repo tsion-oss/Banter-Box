@@ -8,6 +8,8 @@ function useGetConversations() {
     const [conversations, setConversations] = useState([])
     const { authUser } = useAuthContext()
 
+    // console.log(conversations)
+
     useEffect(() => {
        const getConversations = async () => {
         setLoading(true)
@@ -20,6 +22,7 @@ function useGetConversations() {
                 headers: {"jwt": token}
             })
             const data = await res.data
+            
             if(data.error) {
                 throw new Error(data.error)
             }

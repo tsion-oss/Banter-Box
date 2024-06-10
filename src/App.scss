@@ -1,0 +1,21 @@
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/mixins.scss" as *;
+@use "./styles/partials/typography.scss" as *;
+@use "./styles/partials/variables" as *;
+
+*,
+*::before,
+*::after,
+*:visited{
+ box-sizing: border-box;
+  font-family:  Arial, sans-serif;
+  font-weight: 200;
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
