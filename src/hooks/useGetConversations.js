@@ -8,7 +8,6 @@ function useGetConversations() {
     const [conversations, setConversations] = useState([])
     const { authUser } = useAuthContext()
 
-    // console.log(conversations)
 
     useEffect(() => {
        const getConversations = async () => {
@@ -18,7 +17,7 @@ function useGetConversations() {
         const token = authUser.token;
         
         try{
-            const res = await axios.get("http://localhost:8000/api/users", {
+            const res = await axios.get(`http://localhost:8000/api/users`, {
                 headers: {"jwt": token}
             })
             const data = await res.data

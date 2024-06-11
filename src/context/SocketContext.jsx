@@ -26,7 +26,6 @@ export const SocketContextProvider = ({ children }) => {
 
             setSocket(socket)
 
-        // socket.on() ise used to listen to the events. can be used both on client and server side
         socket.on("getOnlineUsers", (users) => {
             setOnlineUsers(users)
         })

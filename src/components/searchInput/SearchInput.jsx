@@ -32,7 +32,7 @@ const SearchInput = () => {
                    value={search}
                    onChange={(e) => setSearch(e.target.value)}/>
             <button type='submit'
-                    ><FaSearch size={20} color="white" /></button>
+                    ><FaSearch className='search_icon' size={20} color="white" /></button>
         </form>
     );
 };

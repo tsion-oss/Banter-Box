@@ -5,9 +5,7 @@ import { useSocketContext } from '../../context/SocketContext.jsx';
 
 const Conversation = ({ conversation, lastIdx }) => {
     const { selectedConversation, setSelectedConversation } = useConversation()
-
     const isSelected = selectedConversation?._id === conversation._id
-
     const { onlineUsers } = useSocketContext()
     const isOnline = onlineUsers.includes(conversation._id)
 
@@ -16,12 +14,10 @@ const Conversation = ({ conversation, lastIdx }) => {
           <div className={isSelected ? 'conversation selected' : 'conversation'}
                onClick={() => setSelectedConversation(conversation)}  >
              <div className={`avatar ${isOnline ? "online": ""}`}>
-                <div>
-                    <img alt='user avatar'
-                         src={conversation.profilePic}/>
-                      {/* <img src={`https://avatar.iran.liara.run/username?username=[${conversation.fullName}]`}/> */}
-
-                </div>
+                <img 
+                  alt='user avatar'
+                  src={conversation.profilePic}
+                />
              </div>
 
              <div>

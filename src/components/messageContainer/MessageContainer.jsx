@@ -4,9 +4,12 @@ import useConversation from '../../store/useConversation.js';
 import Messages from '../message/Messages.jsx';
 import { useAuthContext } from '../../context/AuthContext.jsx';
 import "./MessageContainer.scss"
+import logo from '../../assets/logo/banter-box.png'
+import { useSocketContext } from '../../context/SocketContext.jsx';
 
-const MessageContainer = () => {
+const MessageContainer = ({ setReRender }) => {
     const { selectedConversation, setSelectedConversation } = useConversation()
+    const { onlineUsers } = useSocketContext();
   
 
     useEffect(() => {
@@ -18,18 +21,18 @@ const MessageContainer = () => {
             {!selectedConversation? 
             <NoChatSelected/> :
             <>
-            {/* Header */}
             <div className='message-container__header'>
-                <div>
-                    <img src={selectedConversation.profilePic} alt='user avatar' />
-                </div>
-                <div>
-                    {/* <span>To:</span> */}
-                    <span>{selectedConversation.fullName}</span>
-                </div>
+                
+                    <div>
+                        <img src={selectedConversation.profilePic} alt='user avatar' />
+                    </div>
+                    <div>
+                        <span>{selectedConversation.fullName}</span>
+                    </div>
+        
             </div>
 
-            <Messages/>
+            <Messages setReRender={setReRender}/>
             </>
             }
         </div>
@@ -41,11 +44,12 @@ export default MessageContainer;
 const NoChatSelected = () => {
     const { authUser } = useAuthContext()
     return(
-        <div>
-            <div>
-                <p>Welcome {authUser.fullName}</p>
-                <p>Select a chat to start messaging</p>
+            <div className='introduction'>
+                <img alt='banter box logo' src={logo}/>
+                <div>
+                    <p className='name'>Welcome <span className='full-name'>{authUser.fullName}</span></p>
+                    <p className='select'>Select a chat to start messaging</p>
+                </div>
             </div>
-        </div>
     )
 }

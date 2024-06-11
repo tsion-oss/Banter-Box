@@ -22,8 +22,6 @@ const SignUp = () => {
         
         await signup(form)
         toast.success("Signup successful. You can now login")
-        // navigate('/login')
-
     }
 
     return (
@@ -34,7 +32,6 @@ const SignUp = () => {
                  src={logo}/>
            </div>
            <div className='signup__main'>
-            {/* <h1 className='signup__h1'>Sign Up</h1> */}
             <form className='signup__form' onSubmit={handleSubmit}>
                <div className='signup__name-div input-div'>
                     <label>Fullname</label>

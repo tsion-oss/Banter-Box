@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import useSendMessage from '../../hooks/useSendMessage';
-import MessageInput from '../messageInput/MessageInput';
+import React, { useEffect, useRef } from 'react';
+import { MessageInput } from '../conversations/Conversations';
 import useGetMessages from '../../hooks/useGetMessages';
 import { useAuthContext } from '../../context/AuthContext';
 import useConversation from '../../store/useConversation';
 import "./Messages.scss";
 import useListenMessages from '../../hooks/useListenMessages';
 import "/src/index.css";
+import logo from '../../assets/logo/banter-box.png'
 
 const Message = ({ message }) => {
     const { authUser } = useAuthContext();
@@ -40,7 +40,7 @@ const Message = ({ message }) => {
     );
 };
 
-const Messages = () => {
+const Messages = ({ setReRender }) => {
     const { messages } = useGetMessages();
     const messagesEndRef = useRef(null);
     useListenMessages();
@@ -61,14 +61,15 @@ const Messages = () => {
                 ))}
 
                 {messages.length === 0 && (
-                    <div>
+                    <div className='start-message'>
+                        <img alt='logo' src={logo}/>
                         <p>Send a message to start the conversation</p>
                     </div>
                 )}
                 <div ref={messagesEndRef} />
             </div>
             <div className='message-input'>
-                <MessageInput />
+                <MessageInput setReRender={setReRender} />
             </div>
         </div>
     );

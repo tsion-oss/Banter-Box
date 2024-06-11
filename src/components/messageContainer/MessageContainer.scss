@@ -1,14 +1,18 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/variables" as *;
 
 .message-container{
     width: 100%;
     height: 100%;
   
-    border-left: 3px solid white;
+    border-left: 3px solid rgb(244, 244, 244);
     &__header{
-        background: white;
-        height: 5rem;
+        background: #F7FFFC;
+        height: 4.5rem;
         padding: 1rem;
-        color: black;
+        color: $main-color;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -16,5 +20,27 @@
             width: 2.5rem;
             border-radius: 50%;
         }
+    }
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    img{
+        width: 80%;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .full-name{
+        font-weight: 800;
+        font-size: 1.1rem;
+        color: rgb(53, 68, 58);
     }
 }

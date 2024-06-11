@@ -19,7 +19,7 @@ const useGetConversationsMessages = () => {
             const token = authUser.token;
 
             try {
-                // Loop through each conversation to fetch messages
+
                 for (const conversation of conversations) {
                     const res = await axios.get(`http://localhost:8000/api/messages/${conversation._id}`, {
                         headers: { "jwt": token }
@@ -28,7 +28,6 @@ const useGetConversationsMessages = () => {
                     const data = res.data;
                     if (data.error) throw new Error(data.error);
 
-                    // Update state with messages for each conversation
                     setAllMessages((prevMessages) => ({
                         ...prevMessages,
                         [conversation._id]: data

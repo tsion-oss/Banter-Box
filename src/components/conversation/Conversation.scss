@@ -1,17 +1,30 @@
 .conversation.selected {
-    background: #6dab9254;
-    color: rgb(193, 221, 210); /* Set the background color to blue when selected */
+    background: #6dab92f1;
+    color: rgb(193, 221, 210); 
+    
 }
-.online{
-    background-color: green;
-}
+.online {
+    position: relative;
+    margin-right: 10px;
+    background: none;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 12px;
+      height: 12px; 
+      background-color: green; 
+      border: 2px solid white; 
+      border-radius: 50%;
+    }
+  }
 .conversation{
     display: flex;
     gap: 1rem;
     align-items: center;
-    border: 2px solid #38393b;
-    // background-color: #1e1f21;
-    // margin-bottom: 0.3rem;
+    border: 1px solid #06060647;
     height: 5rem;
     padding-left: 1.5rem;
     border-radius: 0.2rem;
@@ -19,5 +32,8 @@
     img{
         width: 2.5rem;
         border-radius: 50%;
+    }
+    &:hover{
+        background: #6dab92f1;
     }
 }

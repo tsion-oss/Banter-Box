@@ -10,7 +10,7 @@ const Login = () => {
         password: ''
     })
 
-    const { loading, login } = useLogin()
+    const { login } = useLogin()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
