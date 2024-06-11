@@ -8,9 +8,12 @@ const Sidebar = ({ rerender, setReRender }) => {
     
     return (
         <div className='sidebar'>
+             <SearchInput/>
             <div className='sidebar__inside-div'>
-                <SearchInput/>
+               
+               
                 <Conversations rerender={rerender} setReRender={setReRender} />
+             
             </div>
             
         </div>
