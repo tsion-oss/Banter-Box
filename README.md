@@ -10,13 +10,8 @@ In traditional chat platforms, users often feel hesitant to express themselves f
 
 ## Features
 
-- **Real-time Anonymous Chat**: Users can engage in conversations with others in real-time without revealing personal identities.
-- **Customizable User Settings**: Users have the option to customize their settings to enhance privacy and security, such as setting chat visibility preferences and profile anonymity levels.
-- **Public Chat Rooms**: Users can join public chat rooms based on interests.
-- **Search and Discovery**: Users can search for specific topics or interests to discover relevant chat rooms and conversations.
-
-
-
+- **Real-time Anonymous Chat (One-on-One)t**: Users can engage in one-on-one conversations in real-time without revealing personal identities.
+- **Search**: Users can search for conversations through username.
 
 ## Implementation
 
@@ -37,33 +32,30 @@ In traditional chat platforms, users often feel hesitant to express themselves f
 - JWT (JSON Web Tokens) for user authentication
 
 **Deployment**:
-- Netlify(frontend) Heroku(backend) 
+- Netlify(frontend) Heroku(backend)
 
-### Sitemap
+### Starting the Server with Vite
 
-- Chat Rooms Directory
-- Public Chat Room
-- User Profile Settings
+To start the Banter Box server locally using Vite, follow these steps:
+
+1. Clone the repository from GitHub.
+2. Navigate to the server directory in your terminal.
+3. Run the command `npm install` to install the necessary dependencies.
+4. Start the server by running `npm run dev`.
+
+Once the server is running, you can access the Banter Box application in your web browser.
+
 
 ### Authentication
 
 User authentication is handled using JWT (JSON Web Tokens) for secure access to protected routes.
 
-## Roadmap
 
-1. **Backend Setup**: Implement server-side logic for handling chat rooms, messages, and user authentication.
-2. **Frontend Setup**: Develop the user interface for interacting with chat rooms and managing user settings.
-3. **Real-time Communication**: Integrate Socket.io for real-time messaging between users.
-4. **User Authentication**: Implement user authentication using JWT for secure access to chat features.
-5. **Customizable User Settings**: Develop user profile settings to customize chat preferences and privacy options.
-6. **Chat Room Management**: Implement functionality for creating, joining, and managing public and private chat rooms.
-7. **Testing and Optimization**: Perform thorough testing and optimization to ensure a seamless and responsive chat experience.
-8. **Deployment and Launch**: Deploy the application to a hosting platform and launch to the public.
 
-## Nice-to-Haves
+## Upcoming Features
 
- **Rich Media Support**: Enable support for sharing multimedia content within chat rooms.
- **Notification System**: Implement notification settings for alerting users about new messages and chat invitations.
+- **Customizable User Settings**: Users have the option to customize their settings to enhance privacy and security, such as setting chat visibility preferences and profile anonymity levels.
+- **Public Chat Rooms**: Users can join public chat rooms based on interests.
 
 ![create account page](Banter-Box/images/create-account.png)
 ![Log in page](images/login.png)
